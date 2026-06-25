@@ -1,6 +1,6 @@
 # rag-postgres — documentation
 
-  <img src=".github/assets/togo-mark.svg" alt="togo" height="64" />
+PostgreSQL vector store for ai-rag — pgvector + pg_search BM25 hybrid retrieval
 
 ## Overview
 
@@ -18,23 +18,22 @@ togo install togo-framework/rag-postgres
 
 ## Configuration
 
-Environment variables read by this plugin (extracted from the source):
+Environment variables read by this plugin (extracted from the source — see the gateway/provider docs for each value):
 
-| Env var | Notes |
-|---|---|
-| `DATABASE_URL` | _see provider docs_ |
-| `G` | _see provider docs_ |
-| `RAG_PG_DIM` | _see provider docs_ |
+| Env var |
+|---|
+| `DATABASE_URL"` |
+| `RAG_PG_DIM"` |
 
 ## Usage
 
 ```go
 // Registers a Postgres-backed rag.Store (pgvector + pg_search BM25 -> hybrid RRF).
-// Just install it and set DATABASE_URL; ai-rag picks it up automatically.
+// Install it + set DATABASE_URL; ai-rag uses it automatically.
 ```
 
 ## Links
 
 - Marketplace: https://to-go.dev/marketplace
 - Source: https://github.com/togo-framework/rag-postgres
-- README: ../README.md
+- Full README: ../README.md
